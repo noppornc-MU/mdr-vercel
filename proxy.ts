@@ -5,7 +5,7 @@
 // and are still behind Vercel Authentication.
 import { randomBytes } from 'node:crypto';
 import { NextResponse, type NextRequest } from 'next/server';
-import { BASIC_AUTH_CHALLENGE, checkBasicAuth, readAccessConfig } from '@/lib/security/basic-auth';
+//import { BASIC_AUTH_CHALLENGE, checkBasicAuth, readAccessConfig } from '@/lib/security/basic-auth';
 import { API_CSP, SECURITY_HEADERS, pageCsp } from '@/lib/security/headers';
 import { FixedWindowLimiter, RATE_RULES, clientIp, isCrossOriginWrite, maxBodyBytes } from '@/lib/security/request-guards';
 
