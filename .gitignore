@@ -29,6 +29,9 @@ coverage/
 # Vercel CLI project link
 .vercel/
 
+# Neon local env (pulled by `neon deploy` — contains real DB credentials)
+.env.local
+
 # keys / certificates
 *.pem
 *.key
@@ -37,3 +40,4 @@ coverage/
 
 # agent working notes
 .agents/
+.neon

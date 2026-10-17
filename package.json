@@ -25,6 +25,8 @@
     "@anthropic-ai/sdk": "0.135.0",
     "@aws-sdk/client-bedrock-runtime": "3.1152.0",
     "@google/genai": "2.30.0",
+    "@neon/config": "^1.9.2",
+    "@neon/env": "^1.6.3",
     "@prisma/client": "6.19.3",
     "next": "16.4.2",
     "react": "19.3.1",
