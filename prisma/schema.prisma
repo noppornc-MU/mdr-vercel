@@ -1,0 +1,96 @@
+// IC MDR MVP — Prisma schema (design §4.1)
+// PostgreSQL (local Docker / Neon / Prisma Postgres). Connection strings come from the environment:
+//   DATABASE_URL          — runtime connection (Neon: pooled via PgBouncer)
+//   DATABASE_URL_UNPOOLED — direct connection used by `prisma migrate` (Neon: unpooled)
+// These are the names Neon's Vercel integration injects; locally set both to the same URL in .env.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model Ward {
+  id       Int       @id @default(autoincrement())
+  code     String    @unique
+  name     String
+  wardType String // ICU | NON_ICU
+  aliases  String    @default("[]")
+  isolates Isolate[]
+}
+
+model Organism {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  orgClass String // BACTERIA | YEAST | OTHER
+  group    String // ENTEROBACTERALES | PSEUDOMONAS | ACINETOBACTER | STAPH | ENTEROCOCCUS | OTHER
+  aliases  String    @default("[]")
+  isolates Isolate[]
+}
+
+model Drug {
+  id           Int         @id @default(autoincrement())
+  name         String      @unique
+  drugClass    String
+  displayOrder Int
+  aliases      String      @default("[]")
+  ast          AstResult[]
+}
+
+model Isolate {
+  id             String      @id @default(uuid())
+  code           String      @unique // ISO-2026-000001
+  hn             String // always text
+  sex            String?
+  patientType    String? // OPD | IPD
+  wardId         Int?
+  ward           Ward?       @relation(fields: [wardId], references: [id])
+  labNo          String?
+  orderNo        String?
+  specimenDate   DateTime
+  specimenType   String // BLOOD | RESPIRATORY | URINE | WOUND | OTHER
+  specimenDetail String?
+  organismId     Int
+  organism       Organism    @relation(fields: [organismId], references: [id])
+  reportStatus   String      @default("FINAL") // FINAL | PRELIMINARY | UNKNOWN
+  status         String      @default("DRAFT") // DRAFT | APPROVED
+  source         String // OCR | MANUAL | CSV | SEED
+  needsReview    String      @default("[]") // [{path, reason}]
+  phenotypes     String      @default("[]") // cached JSON of PhenotypeResult[]
+  labComments    String?
+  sourceFile     String?
+  createdBy      String?
+  approvedBy     String?
+  approvedAt     DateTime?
+  createdAt      DateTime    @default(now())
+  ast            AstResult[]
+
+  @@index([hn, organismId, specimenDate])
+  @@index([status, specimenDate])
+}
+
+model AstResult {
+  isolateId String
+  isolate   Isolate @relation(fields: [isolateId], references: [id], onDelete: Cascade)
+  drugId    Int
+  drug      Drug    @relation(fields: [drugId], references: [id])
+  result    String // S | I | R | D
+
+  @@id([isolateId, drugId])
+}
+
+model AiConsultLog {
+  id            Int      @id @default(autoincrement())
+  ts            DateTime @default(now())
+  role          String
+  input         String
+  toolResults   String
+  output        String
+  verify        String
+  model         String
+  promptVersion String
+}

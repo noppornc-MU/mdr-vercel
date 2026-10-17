@@ -1,0 +1,16 @@
+[
+  { "organism": "Klebsiella pneumoniae", "drug": "Ampicillin" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Ampicillin" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Amoxicillin/clavulanate" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Cefoxitin" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Ceftriaxone" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Cefuroxime" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Trimethoprim/sulfamethoxazole" },
+  { "organism": "Pseudomonas aeruginosa", "drug": "Ertapenem" },
+  { "organism": "Enterobacter cloacae complex", "drug": "Ampicillin" },
+  { "organism": "Enterobacter cloacae complex", "drug": "Amoxicillin/clavulanate" },
+  { "organism": "Enterobacter cloacae complex", "drug": "Cefoxitin" },
+  { "organism": "Enterobacter cloacae complex", "drug": "Cefuroxime" },
+  { "organism": "Proteus mirabilis", "drug": "Tetracycline" },
+  { "organism": "Proteus mirabilis", "drug": "Colistin" }
+]

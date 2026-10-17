@@ -1,0 +1,14 @@
+[
+  { "name": "Escherichia coli", "orgClass": "BACTERIA", "group": "ENTEROBACTERALES", "aliases": ["E. coli", "E.coli", "E coli"] },
+  { "name": "Klebsiella pneumoniae", "orgClass": "BACTERIA", "group": "ENTEROBACTERALES", "aliases": ["K. pneumoniae", "K.pneumoniae", "Klebsiella pneumoniae ssp. pneumoniae", "Klebsiella pneumoniae subsp. pneumoniae"] },
+  { "name": "Proteus mirabilis", "orgClass": "BACTERIA", "group": "ENTEROBACTERALES", "aliases": ["P. mirabilis", "P.mirabilis"] },
+  { "name": "Enterobacter cloacae complex", "orgClass": "BACTERIA", "group": "ENTEROBACTERALES", "aliases": ["Enterobacter cloacae", "E. cloacae"] },
+  { "name": "Pseudomonas aeruginosa", "orgClass": "BACTERIA", "group": "PSEUDOMONAS", "aliases": ["P. aeruginosa", "P.aeruginosa"] },
+  { "name": "Acinetobacter baumannii", "orgClass": "BACTERIA", "group": "ACINETOBACTER", "aliases": ["A. baumannii", "A.baumannii", "Acinetobacter baumannii complex"] },
+  { "name": "Staphylococcus aureus", "orgClass": "BACTERIA", "group": "STAPH", "aliases": ["S. aureus", "S.aureus"] },
+  { "name": "Enterococcus faecalis", "orgClass": "BACTERIA", "group": "ENTEROCOCCUS", "aliases": ["E. faecalis", "E.faecalis"] },
+  { "name": "Enterococcus faecium", "orgClass": "BACTERIA", "group": "ENTEROCOCCUS", "aliases": ["E. faecium", "E.faecium"] },
+  { "name": "Stenotrophomonas maltophilia", "orgClass": "BACTERIA", "group": "OTHER", "aliases": ["S. maltophilia"] },
+  { "name": "Candida albicans", "orgClass": "YEAST", "group": "OTHER", "aliases": ["C. albicans"] },
+  { "name": "Candida tropicalis", "orgClass": "YEAST", "group": "OTHER", "aliases": ["C. tropicalis"] }
+]

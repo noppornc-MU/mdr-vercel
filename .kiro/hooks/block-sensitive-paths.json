@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Block real data and secrets",
+      "trigger": "PreToolUse",
+      "description": "R47.1/R47.4: blocks agent file and shell tool calls whose paths or commands reference real seed Excel files, the data/ directory, .env files, or TLS private keys. Paths containing 'synthetic' are allowed.",
+      "matcher": "^(read_file|read_code|fs_write|fs_append|str_replace|delete_file|execute_pwsh|control_pwsh_process|grep_search|file_search|list_directory|smart_relocate)$",
+      "action": {
+        "type": "command",
+        "command": "pwsh -NoProfile -File .kiro/hooks/scripts/block-sensitive-paths.ps1",
+        "timeout": 15
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  { "code": "ICU-A", "name": "ICU A", "wardType": "ICU", "aliases": ["ICU-A", "ICUA", "ICU อายุรกรรม"] },
+  { "code": "ICU-B", "name": "ICU B", "wardType": "ICU", "aliases": ["ICU-B", "ICUB", "ICU ศัลยกรรม"] },
+  { "code": "ICU-PED", "name": "ICU เด็ก", "wardType": "ICU", "aliases": ["PICU", "ICU-PED", "ICU Pediatric"] },
+  { "code": "MED-1", "name": "อายุรกรรม 1", "wardType": "NON_ICU", "aliases": ["MED1", "Medicine 1", "อายุรกรรมชาย"] },
+  { "code": "MED-2", "name": "อายุรกรรม 2", "wardType": "NON_ICU", "aliases": ["MED2", "Medicine 2", "อายุรกรรมหญิง"] },
+  { "code": "MED-3", "name": "อายุรกรรม 3", "wardType": "NON_ICU", "aliases": ["MED3", "Medicine 3"] },
+  { "code": "SUR-1", "name": "ศัลยกรรม 1", "wardType": "NON_ICU", "aliases": ["SUR1", "Surgery 1"] },
+  { "code": "SUR-2", "name": "ศัลยกรรม 2", "wardType": "NON_ICU", "aliases": ["SUR2", "Surgery 2"] },
+  { "code": "ORTHO", "name": "ออร์โธปิดิกส์", "wardType": "NON_ICU", "aliases": ["Ortho", "Orthopedics", "ศัลยกรรมกระดูก"] },
+  { "code": "OBGYN", "name": "สูติ-นรีเวช", "wardType": "NON_ICU", "aliases": ["OB-GYN", "OBGYN", "สูตินรีเวช"] },
+  { "code": "PED", "name": "หอเด็ก", "wardType": "NON_ICU", "aliases": ["Pediatrics", "กุมารเวช"] }
+]

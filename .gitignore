@@ -1,0 +1,39 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# env (keys stay local; only .env.example is committed)
+.env
+.env.*
+!.env.example
+
+# database
+*.db
+*.db-journal
+prisma/dev.db*
+
+# uploads (user files)
+uploads/
+public/uploads/
+
+# logs / misc
+npm-debug.log*
+.DS_Store
+coverage/
+
+# Vercel CLI project link
+.vercel/
+
+# keys / certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
+# agent working notes
+.agents/

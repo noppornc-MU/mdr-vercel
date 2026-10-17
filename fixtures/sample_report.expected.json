@@ -1,0 +1,34 @@
+{
+  "lab_no": "9900000001",
+  "order_no": "7700000001",
+  "hn": "0000123",
+  "sex": "M",
+  "lab_received_at": "2026-10-12",
+  "lab_received_raw": "12/10/2569",
+  "reported_at": "2026-10-15",
+  "report_status": "FINAL",
+  "specimen_raw": "Hemoculture",
+  "lab_comments": "SYNTHETIC SAMPLE REPORT FOR DEMO - NOT A REAL PATIENT",
+  "isolates": [
+    {
+      "organism_raw": "Klebsiella pneumoniae",
+      "ast": [
+        { "drug_raw": "Amikacin", "result": "S" },
+        { "drug_raw": "Amoxicillin/clavulanate", "result": "R" },
+        { "drug_raw": "Ampicillin", "result": "R" },
+        { "drug_raw": "Cefepime", "result": "S" },
+        { "drug_raw": "Cefoxitin", "result": "R" },
+        { "drug_raw": "Ceftriaxone", "result": "R" },
+        { "drug_raw": "Cefuroxime", "result": "R" },
+        { "drug_raw": "Ciprofloxacin", "result": "R" },
+        { "drug_raw": "Ertapenem", "result": "S" },
+        { "drug_raw": "Gentamicin (10 mcg)", "result": "S" },
+        { "drug_raw": "Imipenem", "result": "S" },
+        { "drug_raw": "Meropenem", "result": "S" },
+        { "drug_raw": "Piperacillin/tazobactam", "result": "D" },
+        { "drug_raw": "Tetracycline", "result": "R" },
+        { "drug_raw": "TMP/SMX", "result": "S" }
+      ]
+    }
+  ]
+}

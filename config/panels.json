@@ -1,0 +1,68 @@
+{
+  "ENTEROBACTERALES": [
+    "Amikacin",
+    "Amoxicillin/clavulanate",
+    "Ampicillin",
+    "Cefepime",
+    "Cefoxitin",
+    "Ceftriaxone",
+    "Cefuroxime",
+    "Ciprofloxacin",
+    "Ertapenem",
+    "Gentamicin",
+    "Imipenem",
+    "Meropenem",
+    "Piperacillin/tazobactam",
+    "Tetracycline",
+    "Trimethoprim/sulfamethoxazole"
+  ],
+  "PSEUDOMONAS": [
+    "Amikacin",
+    "Cefepime",
+    "Ceftazidime",
+    "Ciprofloxacin",
+    "Levofloxacin",
+    "Gentamicin",
+    "Imipenem",
+    "Meropenem",
+    "Piperacillin/tazobactam",
+    "Colistin"
+  ],
+  "ACINETOBACTER": [
+    "Amikacin",
+    "Cefepime",
+    "Ceftazidime",
+    "Ciprofloxacin",
+    "Levofloxacin",
+    "Gentamicin",
+    "Imipenem",
+    "Meropenem",
+    "Piperacillin/tazobactam",
+    "Trimethoprim/sulfamethoxazole",
+    "Colistin"
+  ],
+  "STAPH": [
+    "Cefoxitin",
+    "Oxacillin",
+    "Clindamycin",
+    "Erythromycin",
+    "Gentamicin",
+    "Levofloxacin",
+    "Linezolid",
+    "Tetracycline",
+    "Trimethoprim/sulfamethoxazole",
+    "Vancomycin"
+  ],
+  "ENTEROCOCCUS": [
+    "Ampicillin",
+    "Vancomycin",
+    "Linezolid",
+    "Levofloxacin",
+    "Tetracycline"
+  ],
+  "OTHER": [
+    "Trimethoprim/sulfamethoxazole",
+    "Levofloxacin",
+    "Ceftazidime"
+  ]
+}

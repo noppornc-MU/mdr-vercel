@@ -1,0 +1,49 @@
+{
+  "name": "mdr-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "seed": "tsx prisma/seed.ts",
+    "seed:if-empty": "tsx prisma/seed-if-empty.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "vercel-build": "prisma generate && prisma migrate deploy && tsx prisma/seed-if-empty.ts && next build",
+    "postinstall": "prisma generate"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "overrides": {
+    "deepmerge-ts": "8.0.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.135.0",
+    "@aws-sdk/client-bedrock-runtime": "3.1152.0",
+    "@google/genai": "2.30.0",
+    "@prisma/client": "6.19.3",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-is": "19.3.1",
+    "recharts": "3.10.1",
+    "sharp": "0.35.5",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "postcss": "8.5.30",
+    "prisma": "6.19.3",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}

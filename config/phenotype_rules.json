@@ -1,0 +1,51 @@
+[
+  {
+    "code": "CRE",
+    "label": "CRE",
+    "labelTh": "Carbapenem-resistant Enterobacterales",
+    "appliesTo": { "groups": ["ENTEROBACTERALES"], "organisms": [] },
+    "anyR": ["Ertapenem", "Imipenem", "Meropenem"],
+    "note": "Ertapenem หรือ Imipenem หรือ Meropenem = R ; ไม่รวม intrinsic carbapenem resistance [J]"
+  },
+  {
+    "code": "ESBL_SCREEN",
+    "label": "ESBL-screen",
+    "labelTh": "ESBL (ผล screen ไม่ใช่การยืนยัน)",
+    "appliesTo": { "groups": [], "organisms": ["Escherichia coli", "Klebsiella pneumoniae", "Proteus mirabilis"] },
+    "allR": ["Ceftriaxone"],
+    "allTestedS": ["Ertapenem", "Imipenem", "Meropenem"],
+    "note": "Ceftriaxone = R และทุก carbapenem ที่ทดสอบ = S ; เป็นผล screen เท่านั้น [J]"
+  },
+  {
+    "code": "CRAB",
+    "label": "CRAB",
+    "labelTh": "Carbapenem-resistant Acinetobacter baumannii",
+    "appliesTo": { "groups": [], "organisms": ["Acinetobacter baumannii"] },
+    "anyR": ["Imipenem", "Meropenem"],
+    "note": "Imipenem หรือ Meropenem = R [J]"
+  },
+  {
+    "code": "CRPA",
+    "label": "CRPA",
+    "labelTh": "Carbapenem-resistant Pseudomonas aeruginosa",
+    "appliesTo": { "groups": [], "organisms": ["Pseudomonas aeruginosa"] },
+    "anyR": ["Imipenem", "Meropenem"],
+    "note": "Imipenem หรือ Meropenem = R [J]"
+  },
+  {
+    "code": "MRSA",
+    "label": "MRSA",
+    "labelTh": "Methicillin-resistant Staphylococcus aureus",
+    "appliesTo": { "groups": [], "organisms": ["Staphylococcus aureus"] },
+    "anyR": ["Cefoxitin", "Oxacillin"],
+    "note": "Cefoxitin = R หรือ Oxacillin = R [J]"
+  },
+  {
+    "code": "VRE",
+    "label": "VRE",
+    "labelTh": "Vancomycin-resistant Enterococcus",
+    "appliesTo": { "groups": ["ENTEROCOCCUS"], "organisms": [] },
+    "anyR": ["Vancomycin"],
+    "note": "Vancomycin = R [J]"
+  }
+]

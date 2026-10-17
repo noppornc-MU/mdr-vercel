@@ -1,0 +1,103 @@
+{
+  "version": "consult-cached-v1",
+  "note": "Text templates only. Every number is filled from the CURRENT toolResults at request time — never store numbers here.",
+  "labels": {
+    "tier": {
+      "SUPPORTED": "ข้อมูลท้องถิ่นสนับสนุน",
+      "CONSIDER": "พิจารณาประกอบดุลยพินิจ",
+      "NOT_SUPPORTED": "ข้อมูลท้องถิ่นไม่สนับสนุน",
+      "LOW_DATA": "ข้อมูลน้อย",
+      "INTRINSIC": "ดื้อโดยธรรมชาติ"
+    },
+    "specimen": {
+      "BLOOD": "เลือด (blood culture)",
+      "RESPIRATORY": "ทางเดินหายใจ",
+      "URINE": "ปัสสาวะ",
+      "WOUND": "แผล/หนอง",
+      "OTHER": "อื่น ๆ",
+      "ALL": "ทุกชนิด specimen"
+    },
+    "ward_all": "ทั้งโรงพยาบาล",
+    "ward_icu": "ICU รวม",
+    "ward_non_icu": "Non-ICU รวม",
+    "phenotype": {
+      "CRE": "CRE",
+      "ESBL_SCREEN": "ESBL (screen)",
+      "CRAB": "CRAB",
+      "CRPA": "CRPA",
+      "MRSA": "MRSA",
+      "VRE": "VRE"
+    },
+    "none": "ไม่ระบุ"
+  },
+  "fact": {
+    "abg": "{organism} — {drug}: %S {pct_s}% (n={n_tested}) · {tier_label}",
+    "abg_sdd": " · %SDD {pct_sdd}%",
+    "low_n": "{organism} — {drug}: n={n_tested} น้อยกว่า {min_n} · ข้อมูลน้อย ไม่สรุป %S",
+    "isolate": "ผลแล็บของ isolate นี้: {drug} = {result} (ไวตามผลแล็บ)"
+  },
+  "supported_drugs": {
+    "reasoning": {
+      "supported": "ในขอบเขตนี้ ยาที่ข้อมูลท้องถิ่นสนับสนุน ได้แก่ {drugs}",
+      "consider": "ยาที่อยู่ในระดับพิจารณาประกอบดุลยพินิจ ได้แก่ {drugs}",
+      "not_supported": "ยาที่ข้อมูลท้องถิ่นไม่สนับสนุนในขอบเขตนี้ ได้แก่ {drugs}",
+      "none_supported": "ไม่มียาใดอยู่ในระดับ “ข้อมูลท้องถิ่นสนับสนุน” ในขอบเขตนี้ จึงควรพิจารณาร่วมกับผลเพาะเชื้อของผู้ป่วยรายนี้",
+      "low_data_some": "ยาต่อไปนี้มีข้อมูลน้อยในขอบเขตนี้ จึงไม่นำมาสรุป: {drugs}",
+      "phenotype": "ตัวเลขชุดนี้คำนวณเฉพาะ isolate ที่ระบบจัดเป็น {phenotype} ตามกฎฉบับร่าง [J] (รอ ICN/จุลชีววิทยารับรอง)",
+      "isolate_both": "ยาที่ isolate นี้ไวตามผลแล็บ และข้อมูลท้องถิ่นของเชื้อชนิดนี้สนับสนุนด้วย ได้แก่ {drugs}",
+      "isolate_lab_only": "ยาที่ isolate นี้ไวตามผลแล็บ แต่ข้อมูลท้องถิ่นยังไม่ถึงระดับสนับสนุน ได้แก่ {drugs}"
+    },
+    "judgment": [
+      "ตำแหน่งติดเชื้อ ความรุนแรง และสภาวะของผู้ป่วย (เช่น การทำงานของไต ประวัติแพ้ยา) ต้องพิจารณาโดยแพทย์ผู้รักษา",
+      "ใช้ผลเพาะเชื้อและความไวต่อยาของผู้ป่วยรายนี้เป็นหลักเมื่อมีผลแล้ว",
+      "การเลือกยาและขนาดยาให้เป็นไปตามแนวทางการใช้ยาต้านจุลชีพของโรงพยาบาล และปรึกษาเภสัชกร/แพทย์โรคติดเชื้อเมื่อจำเป็น"
+    ]
+  },
+  "low_n": {
+    "detail": "{organism} ใน {ward} ({specimen}) มีจำนวนที่ทดสอบน้อยกว่า {min_n} ในทุกยา (สูงสุด n={max_n}) จึงงดอนุมานและไม่ระบุยาที่ข้อมูลท้องถิ่นสนับสนุน",
+    "judgment": [
+      "พิจารณาขยายขอบเขตเป็นระดับโรงพยาบาลหรือ ICU รวม ด้วยปุ่มด้านล่าง (ระบบไม่ขยายขอบเขตให้อัตโนมัติ)",
+      "ใช้ผลเพาะเชื้อและความไวต่อยาของผู้ป่วยรายนี้ประกอบการตัดสินใจ"
+    ]
+  },
+  "no_data": {
+    "detail": "ไม่พบข้อมูลที่ยืนยันแล้วของ {organism} ใน {ward} ({specimen}) ในช่วง {period} จึงงดตอบ",
+    "judgment": ["ลองขยายขอบเขต ward/specimen หรือช่วงเวลา แล้วถามใหม่"]
+  },
+  "out_of_scope": {
+    "detail": "กรุณาเลือกเชื้อ กลุ่มเชื้อดื้อยา หรือ isolate ก่อน ระบบตอบได้เฉพาะคำถามเกี่ยวกับข้อมูล antibiogram ท้องถิ่น",
+    "judgment": []
+  },
+  "dose": {
+    "detail": "ระบบนี้ไม่ให้ขนาดยา ความถี่ หรือระยะเวลาการให้ยา — โปรดดูแนวทางการใช้ยาต้านจุลชีพของโรงพยาบาล หรือปรึกษาเภสัชกร/แพทย์โรคติดเชื้อ",
+    "judgment": [
+      "ขนาดยาต้องพิจารณาจากน้ำหนัก การทำงานของไต/ตับ ตำแหน่งติดเชื้อ และแนวทางของโรงพยาบาล โดยแพทย์และเภสัชกร"
+    ]
+  },
+  "examples": [
+    {
+      "id": "kp_blood_icub",
+      "question": "K. pneumoniae จาก blood culture ใน ICU B ยาตัวไหนข้อมูลท้องถิ่นสนับสนุน",
+      "context": { "organism": "Klebsiella pneumoniae", "ward": "ICU B", "specimenType": "BLOOD" },
+      "intent": "supported_drugs"
+    },
+    {
+      "id": "ab_icu",
+      "question": "A. baumannii ใน ICU ยาตัวไหนข้อมูลท้องถิ่นสนับสนุน",
+      "context": { "organism": "Acinetobacter baumannii", "wardType": "ICU" },
+      "intent": "supported_drugs"
+    },
+    {
+      "id": "low_n",
+      "question": "Enterococcus faecalis ในหอเด็ก ยาตัวไหนข้อมูลท้องถิ่นสนับสนุน",
+      "context": { "organism": "Enterococcus faecalis", "ward": "หอเด็ก" },
+      "intent": "low_n"
+    },
+    {
+      "id": "dose",
+      "question": "ขอขนาดยา Meropenem สำหรับ K. pneumoniae ใน ICU B",
+      "context": { "organism": "Klebsiella pneumoniae", "ward": "ICU B" },
+      "intent": "dose"
+    }
+  ]
+}
